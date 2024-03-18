@@ -35,16 +35,4 @@ jobs:
     - name: Test with pytest
       run: |
         robot -d ./logs serverest.robot
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: logs/  # Especifica o diretório que deseja enviar como um artefato
-    - name: Display XML Report
-      run: |
-        cat logs/output.xml
-    - name: Download XML Report
-      uses: actions/download-artifact@v2
-      with:
-        name: test-results
-        path: /tmp/test-results
+    
