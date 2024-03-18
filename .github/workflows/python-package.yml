@@ -35,20 +35,15 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        robot serverest.robot
+        robot -d ./logs serverest.robot
     - name: Upload Test Results
       uses: actions/upload-artifact@v2
       with:
         name: test-results
         path: |
-          output.xml
-          log.html
-          report.html
-    - name: Download Test Results
-      uses: actions/download-artifact@v2
-      with:
-        name: test-results
-        path: /tmp/test-results
+          logs/output.xml
+          logs/log.html
+          logs/report.html
     - name: Display XML Report
       run: |
-        cat /tmp/test-results/output.xml
+        cat logs/output.xml
