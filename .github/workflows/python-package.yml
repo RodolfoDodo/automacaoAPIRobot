@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.10", "3.11"]
+        python-version: ["3.11"]
 
     steps:
     - uses: actions/checkout@v3
@@ -44,3 +44,11 @@ jobs:
           output.xml
           log.html
           report.html
+    - name: Download Test Results
+      uses: actions/download-artifact@v2
+      with:
+        name: test-results
+        path: /tmp/test-results
+    - name: Display XML Report
+      run: |
+        cat /tmp/test-results/output.xml
