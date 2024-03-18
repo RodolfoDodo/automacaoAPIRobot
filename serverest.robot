@@ -11,7 +11,7 @@ ${CADASTRO_USUARIO}     https://serverest.dev/usuarios
 Cadastro Usuario
     ${payload}      Create Dictionary
     ...    nome=Guilherme Nicolas Cláudio Pires
-    ...    email=noah-gomes92@br.atlasdfscopsdfsdfco.com
+    ...    email=noah-goesmes92@br.atlasdfscopsdfsdfco.com
     ...    password=teste
     ...    administrador=true
     
