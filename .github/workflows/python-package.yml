@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -40,10 +39,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: |
-          logs/output.xml
-          logs/log.html
-          logs/report.html
+        path: logs/  # Especifica o diretório que deseja enviar como um artefato
     - name: Display XML Report
       run: |
         cat logs/output.xml
