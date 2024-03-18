@@ -8,23 +8,6 @@ ${CADASTRO_USUARIO}     https://serverest.dev/usuarios
 
 
 ***Test Cases***
-Cadastro Usuario
-    ${payload}      Create Dictionary
-    ...    nome=Guilherme Nicolas Cláudio Pires
-    ...    email=noah-goesmes92@br.atlasdfscopsdfsdfco.com
-    ...    password=teste
-    ...    administrador=true
-    
-    
-    ${headers}      Create Dictionary
-    ...             accept=application/json
-    ...             Content-Type=application/json
-
-    ${response}     POST    ${CADASTRO_USUARIO}
-    ...             json=${payload}
-    ...             headers=${headers}
-    
-    Status Should Be        201
 
 Lista de usuarios cadastrados    
     
