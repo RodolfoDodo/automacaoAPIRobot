@@ -4,5 +4,6 @@ on: [push]
 
 jobs:
   test:
+    runs-on: ubunto-20.04
   steps:
-    -run: echo "Ola Testes"
+    - run: echo "Ola Testes"
