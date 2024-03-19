@@ -15,10 +15,10 @@ jobs:
         with:
           python-version: "3.10"
 
-      # - name: Install Node.js 19.1
-      #   uses: actions/setup-node@v3
-      #   with: 
-      #     node-version: "19.1"
+      - name: Install Node.js 16
+        uses: actions/setup-node@v3
+        with: 
+          node-version: "16"
 
       - name: Install Requirements
         run: |
