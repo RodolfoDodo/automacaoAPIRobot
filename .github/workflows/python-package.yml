@@ -36,3 +36,4 @@ jobs:
           name: resultado dos testes
           patch: ./logs
           if-no-files-found: ignore
+          retention-days: 2
