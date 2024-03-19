@@ -26,5 +26,5 @@ jobs:
           pip install -U -r requirements.txt
 
       - name: Rodar os teste
-        run: | robot -d ./logs serverest.robot
-        
+        run: | 
+          robot -d ./logs serverest.robot
