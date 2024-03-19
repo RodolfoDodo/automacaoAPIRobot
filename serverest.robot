@@ -2,7 +2,7 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${BROWSER}        Chrome
+${BROWSER}        headlesschrome
 
 *** Test Cases ***
 Acessar o site DemoBlaze
