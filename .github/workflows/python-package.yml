@@ -20,7 +20,7 @@ jobs:
         with: 
           node-version: "19.1"
 
-      - name: INstall Requirements
+      - name: Install Requirements
         run: |
           python -m pip install --upgrade pip
           pip install -U -r requirements.txt
@@ -28,3 +28,11 @@ jobs:
       - name: Rodar os teste
         run: | 
           robot -d ./logs serverest.robot
+
+      - name: Upload Tests Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with: 
+          name: resultado dos testes
+          patch: ./logs
+          if-no-files-found: ignore
