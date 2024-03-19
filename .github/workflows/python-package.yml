@@ -27,7 +27,7 @@ jobs:
 
       - name: Rodar os teste
         run: | 
-          robot -d ./logs serverest.robot
+          robot -d ./logs -v HEADLESS:true serverest.robot
 
       - name: Upload Tests Results
         if: always()
