@@ -2,9 +2,9 @@ name: Run teste API
 on: [push]
 
 jobs:
-  api-test:  # Renomeei este job para "api-test"
-    runs-on: ubuntu-20.04  # Corrigido "ubunto-20.04" para "ubuntu-20.04"
-    name: On Push - API test  # Adicionado "name" corretamente
+  api-test:
+    runs-on: ubuntu-20.04
+    name: On Push - API test
 
     steps:
       - name: Checkout
