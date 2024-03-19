@@ -25,4 +25,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U -r requirements.txt
 
+      - name: Rodar os teste
+        run: | robot -d ./logs serverest.robot
         
