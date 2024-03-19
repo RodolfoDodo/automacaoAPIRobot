@@ -1,9 +1,14 @@
 name: Run teste API
-run-name: On Push - API test
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
-    runs-on: ubunto-20.04
-  steps:
-    - run: echo "Ola Testes"
+    runs-on: ubuntu-20.04  # Corrigido "ubunto-20.04" para "ubuntu-20.04"
+    name: On Push - API test  # Adicionado "name" corretamente
+
+    steps:
+      - name: Ola Testes  # Adicionado um nome para o passo
+        run: echo "Ola Testes"
