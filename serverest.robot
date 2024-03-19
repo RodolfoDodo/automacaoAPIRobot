@@ -1,22 +1,10 @@
-***Settings****
-Documentation    Consulta Usuarios live Robot
-Library          RequestsLibrary
+*** Settings ***
+Library           SeleniumLibrary
 
-**Variables**
-${LISTA_USUARIO}        https://serverest.dev/usuarios
-${CADASTRO_USUARIO}     https://serverest.dev/usuarios
+*** Variables ***
+${BROWSER}        Chrome
 
-
-***Test Cases***
-
-Lista de usuarios cadastrados    
-    
-    ${headers}    Create Dictionary
-    ...           accept=application/json
-    ...           Content-Type=application/json
-
-    ${response}         GET                  ${LISTA_USUARIO}
-   
-    ...            headers=${headers}
-
-    Status Should Be    200
+*** Test Cases ***
+Acessar o site DemoBlaze
+    Open Browser    https://www.demoblaze.com/    ${BROWSER}
+    Maximize Browser Window
