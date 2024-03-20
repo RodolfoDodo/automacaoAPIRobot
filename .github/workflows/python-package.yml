@@ -15,22 +15,26 @@ jobs:
         with:
           python-version: "3.10"
 
+      - name: Install Node.js 20
+        uses: actions/setup-node@v3
+        with: 
+          node-version: "20"
+
       - name: Install Requirements
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade robotframework-seleniumlibrary
-          
+          pip install -U -r requirements.txt
 
 
-       - name: Rodar os teste
-         run: | 
-           robot -d ./logs serverest.robot
+      - name: Rodar os teste
+        run: | 
+          robot -d ./logs serverest.robot
 
-       - name: Upload Tests Results
-         if: always()
-         uses: actions/upload-artifact@v3
-         with: 
-           name: resultado dos testes
-           path: ./logs
-           if-no-files-found: ignore
-           retention-days: 2
+      - name: Upload Tests Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with: 
+          name: resultado dos testes
+          path: ./logs
+          if-no-files-found: ignore
+          retention-days: 2
