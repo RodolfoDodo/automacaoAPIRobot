@@ -23,8 +23,8 @@ jobs:
       - name: Install Requirements
         run: |
           python -m pip install --upgrade pip
-         robotframework-seleniumlibrary
-
+          pip install --upgrade robotframework-seleniumlibrary
+          
 
 
       # - name: Rodar os teste
