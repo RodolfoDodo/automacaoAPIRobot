@@ -30,11 +30,8 @@ jobs:
         run: | 
           robot -d ./logs serverest.robot
 
-      - name: Upload Tests Results
-        #if: always()
-        uses: actions/upload-artifact@v3
-        with: 
-          name: resultado dos testes
-          path: ./logs
-          #if-no-files-found: ignore
-          retention-days: 2
+      - name: Exportando relatório
+        uses: actions/upload-artifact@v4
+          with:
+            name: Resultado dos testes
+            path: ./logs
