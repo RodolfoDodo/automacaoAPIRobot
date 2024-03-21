@@ -31,7 +31,7 @@ jobs:
           robot -d ./logs serverest.robot
 
       - name: Upload Tests Results
-        if: always()
+        #if: always()
         uses: actions/upload-artifact@v3
         with: 
           name: resultado dos testes
