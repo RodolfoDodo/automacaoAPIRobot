@@ -35,6 +35,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
           name: resultado dos testes
-          #path: ./logs
+          path: ./logs
           #if-no-files-found: ignore
           retention-days: 2
